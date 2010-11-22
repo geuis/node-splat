@@ -10,3 +10,6 @@ USAGE:
 3) Set "length" to the total number of bytes that should be sent over time. Each byte is sent once per second.
 4) Run it from your terminal in the node-splat directory, "node app.js"
 5) If you don't know what Node.js is, go to http://nodejs.org
+
+Running more than 125 max_connections tended to make node.js on the dev system crash. You may be able to do more. Run multiple instances (separate terminal windows on a Mac) to achieve the desired effect.
+On the test system (Mac Pro), Apache on localhost stopped responding with 250 connections. The author's website running on lighttpd handled up to about 1125 simultaneous connections before hanging.
